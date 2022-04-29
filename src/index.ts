@@ -1,5 +1,5 @@
 export interface PluginData {
-    sourceUrl: string;
+    sourceFile: FileInformation;
     callbackUrl: string;
 }
 
@@ -12,7 +12,19 @@ export class PluginCompletionMessage {
     public original!: PluginData;
     public status!: PluginCompletionMessageStatus;
     public size!: number;
-    public target!: string;
     public extension!: string;
     public fileName!: string;
+}
+
+export interface FileInformation {
+    name: string;
+    extension: string;
+    mime: string;
+    md5: string;
+    size: string;
+    width: number;
+    height: number;
+    uploadedTimestamp: number;
+    metadata?: string | null;
+    url: string;
 }
