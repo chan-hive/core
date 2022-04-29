@@ -1,0 +1,50 @@
+{
+    "name": "@chanhive/core",
+    "version": "1.0.0",
+    "author": "Sophia <beyondthesophia@gmail.com>",
+    "license": "MIT",
+    "main": "dist/index.js",
+    "typings": "dist/index.d.ts",
+    "jsnext:main": "dist.es2015/index.js",
+    "module": "dist.es2015/index.js",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/chan-hive/core.git"
+    },
+    "scripts": {
+        "dev": "rimraf dist/ dist.es2015/ && tsc --watch",
+        "lint": "eslint \"src/**/*.ts\" --fix",
+        "build": "rimraf dist/ dist.es2015/ && tsc && tsc -P tsconfig.es2015.json",
+        "prepublishOnly": "npm run build",
+        "semantic-release": "semantic-release"
+    },
+    "files": [
+        "package.json",
+        "yarn.lock",
+        "dist",
+        "dist.es2015"
+    ],
+    "devDependencies": {
+        "@semantic-release/commit-analyzer": "^8.0.1",
+        "@semantic-release/git": "^9.0.0",
+        "@semantic-release/github": "^7.2.0",
+        "@semantic-release/npm": "^7.0.10",
+        "@semantic-release/release-notes-generator": "^9.0.2",
+        "@types/fs-extra": "^9.0.9",
+        "@types/jest": "^26.0.22",
+        "@types/lodash.clonedeep": "^4.5.6",
+        "@types/node": "^14.14.37",
+        "@typescript-eslint/eslint-plugin": "^4.19.0",
+        "@typescript-eslint/parser": "^4.19.0",
+        "eslint": "^7.23.0",
+        "eslint-config-prettier": "^8.1.0",
+        "prettier": "^2.2.1",
+        "semantic-release": "^17.4.2",
+        "ts-node": "^9.1.1",
+        "typescript": "^4.2.3"
+    },
+    "dependencies": {
+        "rimraf": "^3.0.2",
+        "tslib": "^2.1.0"
+    }
+}
