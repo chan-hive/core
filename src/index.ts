@@ -9,12 +9,12 @@ export enum PluginCompletionMessageStatus {
     Failed = "failed",
 }
 
-export class PluginCompletionMessage {
-    public original!: PluginData;
-    public status!: PluginCompletionMessageStatus;
-    public size!: number;
-    public extension!: string;
-    public fileName!: string;
+export interface PluginCompletionMessage {
+    pluginName: string;
+    status: PluginCompletionMessageStatus;
+    size: number;
+    extension: string;
+    fileName: string;
 }
 
 export interface FileInformation {
