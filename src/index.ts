@@ -21,7 +21,7 @@ export interface FileInformation {
     extension: string;
     mime: string;
     md5: string;
-    size: string;
+    size: number;
     width: number;
     height: number;
     uploadedTimestamp: number;
