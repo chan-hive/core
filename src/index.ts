@@ -1,6 +1,7 @@
 export interface PluginData {
     sourceFile: FileInformation;
     callbackUrl: string;
+    pluginName: string;
 }
 
 export enum PluginCompletionMessageStatus {
