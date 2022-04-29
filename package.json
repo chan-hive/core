@@ -1,6 +1,6 @@
 {
     "name": "@chanhive/core",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "author": "Sophia <beyondthesophia@gmail.com>",
     "license": "MIT",
     "main": "dist/index.js",
